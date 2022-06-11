@@ -1,0 +1,381 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 12px;
+     font-weight: 100;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* HEADER */
+
+header {
+     width: 100%;
+     padding: 1em;     
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: center;
+
+}
+header h3 {
+     font-size: 2em;
+     font-family: 'Dancing Script', cursive;
+     font-style: bold;
+     flex-basis: 15%;
+     margin: 0 auto;
+     line-height: normal;
+     text-align: center;
+     padding: auto;
+}
+header nav {
+     flex-basis: 70%;
+     height: fit-content;
+}
+header ul {
+     list-style-type: none;
+     width: 100%; 
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: center;
+     justify-content: space-around;
+}
+header li a {
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #490131;
+    
+}
+header>.online {
+     flex-basis: 15%;
+     justify-content: center;
+     margin: 0;
+}
+.hamburger {
+     display: none;
+     text-transform: uppercase;
+}
+
+
+/* MAIN  */
+main {
+     background-image: url("../img/curlmain.jpeg");
+     background-position: center;
+     background-size:cover;
+     background-repeat: no-repeat;
+     padding: 5% 0 0 0;
+     height: fit-content;
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: flex-end;
+     overflow: visible;
+}
+
+main h1 {
+     color: #490131;
+     font-family: 'Dancing Script', cursive;;
+     font-style: italic;
+     font-size: 5rem;
+     width: 40%;
+     text-align: center;
+     margin: 0;
+     line-height: 1.5em;
+}
+main p {
+     color: #490131;
+     font-family: 'Dancing Script', cursive;
+     font-size: 2em;
+     text-align: center;
+     margin: 1em 0;
+     width: 40%;
+}
+.button {
+     background-color: black;
+     color: white;
+     text-decoration: none;
+     padding: 1rem;
+     text-transform: uppercase;
+     margin: 2em 0;
+     width: fit-content;
+}
+.button:hover{
+     background:white;
+     color: black;
+}
+main>.button{
+     margin-right: 15%;
+}
+.firstvis {
+     background-color: #490131;
+     width: 20%;
+     height: fit-content;
+     padding: 1em 0;
+     margin: 0 10% 10% 0;
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: center;
+}
+.firstvis>span, .firstvis>h5 {
+     color: white;
+     text-transform: uppercase;
+     padding: 1em;     
+     text-align: center;
+
+}
+.firstvis h5 {
+     font-size: 1.5rem;
+     margin: 0 auto;
+}
+.online {
+     background-color: white;
+     color: black;
+     text-transform: uppercase;
+     text-decoration: none;
+     text-align: center;
+     padding: 1em;
+     margin: 1em;
+     width: fit-content;
+}
+.online:hover{
+     background-color: #490131;
+     border: 1px solid white;
+     color: white;
+}
+main>h6 {
+     color: #490131;
+     text-transform: uppercase;
+     margin-right: 10%;
+}
+
+
+
+/* ICONS */
+.icons {
+     display: flex;
+     justify-content: center;
+}
+.icons section {
+     width: 20%;
+     margin: 3%;
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+}
+.icons img {
+     margin: 0 auto;
+}
+.icons h4 {
+     text-transform: uppercase;
+     text-align: center;
+}
+.icons p {
+     text-align: center;
+     font-size: .8rem;
+     line-height: 1.5em;
+}
+
+
+/* Momentum */
+.bounce {
+     background-color: lightgray;
+     padding: 5% 10%;
+     height: fit-content;
+     display: flex;
+}
+
+.left {
+     width: 50%;
+     padding-right: 10%;
+}
+.left h2 {
+     font-size: 3rem;
+     font-family: 'Dancing Script', cursive;}
+.left p {
+     font-size: .8rem;
+     line-height: 1.5em;
+     margin-bottom: 5em;
+}
+video {
+     width: 50%;
+}
+
+
+/* Stylists */
+.stylists {
+     display: flex;
+     justify-content:space-around;
+     justify-items: center ;
+     padding: 5% 15%;
+}
+.stylists section {
+     width: 33.33%;
+     display: flex;
+     flex-flow: column nowrap;
+     margin: 2%;
+}
+.stylists div {
+     background-color: black;
+     width: 80%;
+     padding: 1em 2em;
+     margin: 0 auto;
+     position: relative;
+     bottom: 2.5em;
+}
+.stylists div>* {
+     color: white;
+     text-transform: uppercase;
+     text-align: center;
+     margin: 0 auto;
+     line-height: 1.5rem;
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: center;
+}
+.stylists span {
+     font-size: .8rem;
+     text-align: center;
+}
+
+
+/* OFFER */
+.offer {
+     background-image: url("../img/curlhighlights.jpg");
+     background-position: right;
+     background-repeat: no-repeat;
+     background-color: #f0f0f2;
+     background-size: 50%;
+     height: min-content;
+     width: 70%;
+     margin: 0 auto;
+     padding: 5%;
+     display: flex;
+     flex-flow: column nowrap;
+}
+.offer>h4, .offer>h3 {
+     text-transform: uppercase;
+     line-height: 2em;
+     margin: 0;
+     width: 50%;
+}
+.offer>h4 {
+     font-size: 1.5rem;
+}
+.offer>h3 {
+     font-size: 2.5rem;
+}
+
+
+/* Lookbook */
+.lookbook {
+     width: 70%;
+     margin: 5% auto;
+}
+.lookbook h2 {
+     font-family: 'Dancing Script', cursive;
+     font-size: 3rem;
+     width: 100%;
+     text-align: center;
+}
+.images {
+     width: 100%;
+     height: 120vh;
+     display: flex;
+     flex-flow: column wrap;
+     align-content: center;
+     overflow: hidden;
+}
+.images>img {
+     flex-basis: 30%;
+     width: 30%;
+     margin: 5px;
+}
+
+/* FOOTER */
+footer{
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-around;
+     align-items: center;
+}
+footer h4{
+     color: #490131;
+     font-size: 2em;
+}
+.social{
+     flex-basis: 30%;
+     list-style-type: none;
+     display: flex;
+     justify-content: space-around;
+}
+.social i {
+     font-size: 2em;
+     color: #490131;
+     width: 30%;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media all and (max-width:850px) {
+     .main p {
+          width: 20%;
+          text-align: right;
+     }
+
+}
+@media all and (max-width: 650px){
+     header .hamburger {
+          display: block;
+          text-align: center;
+     }
+     header .hamburger :hover{
+          cursor: pointer;
+     }
+     header nav ul{
+          display: flex;
+          flex-flow: column nowrap;
+     }
+     .hide {
+          display: none;
+     }
+     main {
+          align-items: center;
+     }
+     main>h1, main>p, main>h6 {
+          color: white;
+          background-image: radial-gradient(#490131 20%, transparent 70%);
+     }
+     main>.button, main>.firstvis, main>h6{
+          margin-right: 0;
+     }
+     .offer {
+          background-image: none;
+          align-items: center;
+     }
+     .images {
+          height: 150vh;
+     }
+     .images>img {
+          width: 48%;
+     }
+     
+}
