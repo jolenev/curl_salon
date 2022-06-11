@@ -252,6 +252,9 @@ video {
      font-size: .8rem;
      text-align: center;
 }
+.stylists img {
+     height: 100%;
+}
 
 
 /* OFFER */
